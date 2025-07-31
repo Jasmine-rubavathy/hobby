@@ -1,0 +1,121 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+  background: linear-gradient(to right, #9c27b0, #e91e63);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #5d1049;
+  margin-top: 10px;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Hobby Card */
+.hobby-card {
+  background: #ffffffee;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.hobby-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+  border-image: linear-gradient(135deg, #f06292, #ba68c8) 1;
+}
+
+.hobby-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Hobby Info Styling */
+.hobby-info {
+  padding: 20px;
+}
+
+.hobby-info h2 {
+  color: #6a1b9a;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.hobby-info p {
+  color: #4a148c;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Optional Links/Button */
+.hobby-info a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background-color: #f06292;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.hobby-info a:hover {
+  background-color: #ec407a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .hobby-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .hobby-info p {
+    font-size: 0.95rem;
+  }
+}
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #6a1b9a;
+  background: #fff0f6;
+  border-top: 2px dashed #ce93d8;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
